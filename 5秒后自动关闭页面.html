@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#left{
+				left: 0;
+			}
+			#right{
+				right: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<img src="img/clock.jpg" alt="" id="left">
+		<img src="img/clock.jpg" alt="" id="right">
+		<p>ndiehwdwdokksdii</p>
+		<p>ndiehwdwdokksdii</p>
+		<p>ndiehwdwdokksdii</p>
+		<p>ndiehwdwdokksdii</p>
+		<p>ndiehwdwdokksdii</p>
+		<p>ndiehwdwdokksdii</p>
+		<p>ndiehwdwdokksdii</p>
+		<p>ndiehwdwdokksdii</p>
+		<p>ndiehwdwdokksdii</p>
+		
+	</body>
+</html>
+<script>
+	function $(id){return document.getElementById(id);}
+	function hide(id){
+		$(id).style.display="none";
+	}
+	hide("left");
+	function show(id){
+		$(id).style.display="block";
+	}
+	setTimeout(closeAd,5000);
+	function closeAd(){
+		hide("left");
+		hide("right");
+	}
+</script>

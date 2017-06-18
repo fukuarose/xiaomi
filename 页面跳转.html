@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div id="demo"></div>
+	</body>
+</html>
+<script>
+	window.onload=function(){
+			var demo=document.getElementById("demo");	
+			var speed=1000;
+			setTimeout(scape,speed);
+			var count=5;
+			function scape(){
+				count--;
+				demo.innerHTML="本页面"+count+"秒后跳转";
+				if(count<=0){
+					window.location.href="时钟.html";//跳转页面
+				}else{
+					setTimeout(scape,speed);
+				}
+			}
+	}
+</script>

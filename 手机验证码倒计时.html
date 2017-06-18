@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text">
+		<button id="btn">点击发送短信</button>
+	</body>
+</html>
+<script>
+	var btn=document.getElementById("btn");
+	var count=10;
+	var timer=null;
+	btn.onclick=function(){
+		clearInterval(timer);
+		this.disabled=true;
+		var _this=this;
+		timer=setInterval(sendTextMessage,1000);
+		function sendTextMessage(){
+			count--;
+			
+			//因为button是个双标签，所以要更改他的值用innerHtml而不是value。
+			//this指向事件的调用者，或者函数的使用者。当前这个指向定时器
+			if(count>=0){
+				_this.innerHTML="还剩余"+count+"秒";
+			}else{
+				_this.innerHTML="重新发送";
+				_this.disabled=false;
+				count=10;
+				clearInterval(timer);
+			}
+			
+			
+		}
+	}
+</script>

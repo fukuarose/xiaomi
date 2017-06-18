@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box{
+				width: 200px;
+				height: 200px;
+				background-color: lightpink;
+				box-shadow: 1px 1px 2px lightblue;
+				position: absolute;
+				top: 50%;
+				left:50%;
+				margin: -100px 0 0 -100px;
+			}
+			p{
+				font:700 20px/30px "微软雅黑";
+				color: orangered;
+				text-align: center;
+				width: 100px;
+				height: 30px;
+				margin: 10px auto;
+			}
+			span{
+				display: block;
+				width: 120px;
+				height: 80px;
+				background-color: lightgreen;
+				margin:30px auto;
+				font:400 30px/80px forte;
+				color: white;
+				text-align: center;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var box=document.getElementById("box");
+				var boys=box.children;
+				var date=new Date();
+				var arr=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+				boys[0].innerHTML=date.getFullYear()+"/"+(date.getMonth()+1)+"/"+date.getDate();
+				boys[1].innerHTML=arr[date.getDay()];
+			}
+		</script>
+	</head>
+	<body>
+		<div class="box" id="box">
+			<p></p>
+			<span></span>
+		</div>
+	</body>
+</html>
